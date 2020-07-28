@@ -27,9 +27,12 @@ public class National {
                 }
                 System.out.println();
             }
+            bufferedReader.close();
+            fileReader.close();
         }catch (Exception e){
             e.printStackTrace();
         }
+
 
 
 

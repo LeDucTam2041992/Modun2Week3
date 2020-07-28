@@ -6,7 +6,6 @@ public class Run {
     static  Book[] books = new Book[10];
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         books[0] = new ProgrammingBook("10001","JavaCore","Jame",200,"English",
                 "Spring");
         books[1] = new ProgrammingBook("10002","PHP","John",150,"English",
@@ -33,7 +32,7 @@ public class Run {
             System.out.println("0. Exit");
             choice = sc.nextInt();
             switch (choice) {
-                case 1 : findBook();break;
+                case 1 : findBookByName();break;
                 case 2 : totalPrice();break;
                 case 3 : findBookOfLanguage();break;
                 case 4 : sortBookOfPrice();break;
@@ -52,7 +51,6 @@ public class Run {
             }
             books[k+1] = currentElement;
         }
-
         System.out.println("Enter price of book :");
         double price = sc.nextDouble();
         Book book = binarySearch(books,0,books.length,price);
@@ -136,7 +134,7 @@ public class Run {
         System.out.println("Total price = " + totalPrice + " usd!");
     }
 
-    private static void findBook() {
+    private static void findBookByName() {
         Scanner sc = new Scanner(System.in);
         boolean isHas = false;
         System.out.println("Enter the books name you want to find :");
