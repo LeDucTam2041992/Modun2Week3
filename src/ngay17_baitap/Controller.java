@@ -21,7 +21,7 @@ public class Controller {
 
     public LinkedList<Product> readProductsFromFile(String fileName){
         LinkedList<Product> products = new LinkedList<>();
-        Product product;
+        Product product = null;
         try {
             input = new ObjectInputStream(new FileInputStream(fileName));
             while ((product = (Product) input.readObject()) != null){
